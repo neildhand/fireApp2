@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Fire Application  </title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!-- Jquery link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div id="map">
+
+      <div class="Intro">
+          <h1 class="display"><strong>Wild Fire Checker</strong></h1>
+          
+          <p>Welcome! This website was created to ensure the safety of all during a fire crisis in your area. </p>
+          
+          <p>Instruction: To use our website simply enter a zip code in the search bar below and you will be able to see all fires in the area on Google Maps. Either click your mouse over the affected area on Google Maps or select one of the fires under “Fires in the Area” section. By selecting one the map Google Map UI will atomically the effected area and will proceed to provide you with all of the information you need to know. </p>
+      </div>
+
+      <div id="imageDiv">
+        <img src="assets/images/fire.jpg">
+      </div>  
+
+    </div>
+
+		
+<!-- 	<form id="myForm">
+  		<select id="selectState">
+    	<option>Choose a state</option>
+  		</select>
+	</form> -->
+    
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-primary">
+          <div class="panel-body">
+              <table class="table table-hover" id="comments">
+
+                <thead>
+                  <tr>
+                    <th style="text-align: center;">Comments:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+          </div>
+
+
+        </div>
+
+        <!-- Add comments -->
+        <div class="panel panel-primary">
+          <div class ="panel-heading">
+            <h2 id="searchAFire" class="panel-title"><strong>Add Comment</strong></h2>
+            <p>Below are user's comments on fires nation wide! To add to the comment section merely type in your comment in the text box below. When done click on the submit button below. </p>
+          </div>
+          <div class="panel-body">
+            <form>
+                <div class="form-group">
+                  <label for="employee-name-input">Search</label>
+                  <input class="form-control" id="searchInput" type="text" placeholder="Enter Zip Code or Address">
+                </div>
+
+                <div class="dropdown">
+                	<form id="myForm">
+  						<select id="selectState">
+    					<option>Choose a state</option>
+  						</select>
+					</form>
+				</div>
+        <br>
+                <div class="form-group">
+                  <label for="role-input">Comment</label>
+                  <input class="form-control" id="commInput" type="text" placeholder="Add Your Comment Here">
+                </div>
+                <button class="btn btn-danger" id="add-fire-btn" type="submit">Submit</button>
+              
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+
+  <!-- API link -->
+  <script src="assets/javascript/fireApi.js"></script>
+
+  <script async defer 
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD85bBHJ4z4CSsbxQC4KJ93MNSeiI1sfHA"></script> 
+  <script src="assets/javascript/googleMapApi.js"></script>
+
+  <script src="assets/javascript/mainApp.js"></script>
+
+</body>
+<br>
+<footer> Copyright &copy; Austin Bootcamp Coding 2017 </footer>
+</html>
